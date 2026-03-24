@@ -1,0 +1,29 @@
+[package]
+name = "event_xml_exporter_rust"
+version = "0.1.0"
+edition = "2024"
+description = "Modern Windows Event XML Exporter desktop app written in Rust."
+license = "MIT"
+publish = false
+
+[dependencies]
+anyhow = "1.0.102"
+chrono = { version = "0.4.44", features = ["clock"] }
+eframe = "0.33.3"
+egui = "0.33.3"
+image = "0.25.10"
+quick-xml = { version = "0.39.2", features = ["serialize"] }
+rfd = "0.17.2"
+windows = { version = "0.62.2", features = [
+    "Win32_Foundation",
+    "Win32_System_EventLog",
+    "Win32_System_Diagnostics_Debug",
+] }
+
+[build-dependencies]
+winresource = "0.1.19"
+
+[profile.release]
+lto = "thin"
+codegen-units = 1
+strip = true

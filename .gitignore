@@ -1,0 +1,21 @@
+/target/
+
+# Rust / build
+*.pdb
+*.d
+
+# Logs / temp
+*.log
+*.tmp
+*.temp
+
+# Editor / IDE
+/.idea/
+/.vscode/
+*.swp
+*.swo
+
+# OS junk
+.DS_Store
+Thumbs.db
+desktop.ini
